@@ -24,7 +24,10 @@
     "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0",
     "ToDoApp.AppServices": "1.0.0-*",
     "ToDoApp.IoC": "1.0.0-*",
-    "AutoMapper": "5.2.0"
+    "AutoMapper": "5.2.0",
+    "Swashbuckle.SwaggerGen": "6.0.0-beta901",
+    "Swashbuckle.SwaggerUi": "6.0.0-beta901"
+
   },
 
   "tools": {
@@ -44,7 +47,8 @@
 
   "buildOptions": {
     "emitEntryPoint": true,
-    "preserveCompilationContext": true
+    "preserveCompilationContext": true,
+    "xmlDoc": true
   },
 
   "runtimeOptions": {
