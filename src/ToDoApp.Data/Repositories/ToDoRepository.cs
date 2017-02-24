@@ -46,7 +46,7 @@ namespace ToDoApp.Data.Repositories
 
         public bool Update(ToDo toDo)
         {
-            var affectedRows = connection.Execute("exec todo_sp_update. @Id, @Text, @IsCompleted", toDo);
+            var affectedRows = connection.Execute("exec todo_sp_update @Id, @Text, @IsCompleted", toDo);
 
             return affectedRows > 0;
         }

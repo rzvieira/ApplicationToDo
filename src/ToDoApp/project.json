@@ -26,8 +26,8 @@
     "ToDoApp.IoC": "1.0.0-*",
     "AutoMapper": "5.2.0",
     "Swashbuckle.SwaggerGen": "6.0.0-beta901",
-    "Swashbuckle.SwaggerUi": "6.0.0-beta901"
-
+    "Swashbuckle.SwaggerUi": "6.0.0-beta901",
+      "FluentValidation": "6.2.1"
   },
 
   "tools": {
@@ -48,7 +48,8 @@
   "buildOptions": {
     "emitEntryPoint": true,
     "preserveCompilationContext": true,
-    "xmlDoc": true
+    "xmlDoc": true,
+    "nowarn": [ "CS1591" ]
   },
 
   "runtimeOptions": {

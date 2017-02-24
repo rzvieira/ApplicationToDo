@@ -5,8 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ToDoApp.AppServices.DTOs;
 using ToDoApp.AppServices.Interfaces;
+using ToDoApp.Extensions;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+
+//https://github.com/souzara/todoapp﻿
 
 namespace ToDoApp
 {
@@ -22,7 +25,7 @@ namespace ToDoApp
 
         // GET: api/values
         [HttpGet]
-        public IEnumerable<ToDoDTO> Get([FromBody] ToDoFilterDTO filter)
+        public IEnumerable<ToDoDTO> Get([FromQuery] ToDoFilterDTO filter)
         {
             return _appService.List(filter);
         }
@@ -43,16 +46,16 @@ namespace ToDoApp
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody]ToDoDTO model)
+        public bool Put(int id, [FromBody]ToDoDTO model)
         {
-            _appService.Update(model);
+            return _appService.Update(model);
         }
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public bool Delete(int id)
         {
-            _appService.Delete(id);
+            return _appService.Delete(id);
         }
     }
 }
